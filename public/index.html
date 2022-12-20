@@ -12,43 +12,47 @@
   </head>
   <body>
     <header>
-      <a href="https://titcotour.com/" target="_blank">
+      <a href="/">
         <img src="/images/CodeAnalyzer-logo.png" alt="titcotour logo" />
       </a>
     </header>
 
     <main>
-      <section class="properEnglish">
-        <form id="image-form">
-         
-          <h2 id="title">Explain Code 🦜</h2>
+      <div id="sectionContainer">
+        <section class="properEnglish">
+          <form id="image-form">
+            <h2 id="title">Explain Code 🦜</h2>
 
-          <div class="form-control">
-            <select name="selection" id="selection">
-              <option selected value="correct">Explain</option>
-              <option value="translate">Translate</option>
-            </select>
-            <label for="prompt"
-              >Enter your code:
-              <textarea
-                type="text"
-                id="prompt"
-                name="prompt"
-                placeholder="insert code"
-                rows="10"
-              ></textarea>
-            </label>
+            <div class="form-control">
+              <select name="selection" id="selection">
+                <option selected value="correct">Explain</option>
+                <option value="translate">Translate</option>
+              </select>
+              <label for="prompt"
+                >Enter your code:
+                <textarea
+                  type="text"
+                  id="prompt"
+                  name="prompt"
+                  placeholder="insert code"
+                  rows="30"
+                ></textarea>
+              </label>
+            </div>
+
+            <button type="submit" class="btn">Explain</button>
+          </form>
+        </section>
+        <section id="outputSection">
+          <div class="outputContainer">
+            <textarea
+              id="output"
+              placeholder="AI output will be shown here:"
+              rows="30"
+            ></textarea>
           </div>
-
-          <button type="submit" class="btn">Explain</button>
-        </form>
-      </section>
-      <section>
-        <div class="outputContainer">
-          <!-- <span id="output">AI output will be shown here:</span> -->
-        <p id="output">AI output will be shown here:</p>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
     <div class="spinner"></div>

@@ -50,8 +50,6 @@ section {
   padding: 10px;
 }
 
-
-
 #emoji-container {
   display: block;
   font-size: 1.8rem;
@@ -97,8 +95,6 @@ textarea {
   font-size: 16px;
 }
 
-
-
 button {
   margin-top: 0.5rem;
   display: flex;
@@ -127,10 +123,11 @@ button:hover {
 }
 
 #output {
+  margin-bottom: 6rem;
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  min-height: 3rem;
+  min-height: 4rem;
   background-color: var(--primary-color);
   border-radius: 8px;
   color: white;
@@ -140,8 +137,23 @@ button:hover {
 }
 
 @media (min-width: 768px) {
+
+ #sectionContainer {
+  display: flex;
+  justify-content: center;
+ }
+
   section {
     max-width: 800px;
-    margin-inline: auto;
+    /* margin-inline: auto; */
+  }
+  #outputSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  #output {
+    margin-bottom: 3rem;
   }
 }

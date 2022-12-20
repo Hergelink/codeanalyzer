@@ -13,7 +13,7 @@ function onSubmit(e) {
   const editedPrompt =
     selectValue === 'translate'
       ? 'Translate this code to python ' + prompt
-      : 'Explain what this code does step by step and put a line break before each step:  ' +
+      : 'Explain what this code does step by step:  ' +
         prompt;
 
   if (prompt === '') {
