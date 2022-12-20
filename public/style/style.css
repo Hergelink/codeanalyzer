@@ -50,10 +50,7 @@ section {
   padding: 10px;
 }
 
-#emoji-container {
-  display: block;
-  font-size: 1.8rem;
-}
+
 
 h2 {
   margin-bottom: 1rem;
@@ -141,6 +138,7 @@ button:hover {
  #sectionContainer {
   display: flex;
   justify-content: center;
+  margin-inline: 2rem;
  }
 
   section {

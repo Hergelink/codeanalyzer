@@ -20,11 +20,7 @@ const correctEnglish = async (req, res) => {
       presence_penalty: 0,
     });
 
-    // const aiOutput = response.data.choices[0].text;
-    
-
-    const aiOutput = response.data.choices[0].text.replace(/\d\./g, "\n$&");
-    
+    const aiOutput = response.data.choices[0].text.replace(/\d\./g, '\n$&');
 
     res.status(200).json({
       success: true,
