@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/spinner.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <script src="js/main.js" defer></script>
+    <title>Titcotour yardim</title>
+  </head>
+  <body>
+    <header>
+      <a href="https://titcotour.com/" target="_blank">
+        <img src="/images/titco-logo.png" alt="titcotour logo" />
+      </a>
+    </header>
+
+    <main>
+      <section class="properEnglish">
+        <form id="image-form">
+          <span id="emoji-container"
+            ><span id="emoji-change">🇬🇧</span> > 🇬🇧</span
+          >
+          <h2 id="title">İngilizceyi Düzelt</h2>
+
+          <div class="form-control">
+            <select name="selection" id="selection">
+              <option selected value="correct">Düzenle</option>
+              <option value="translate">Çeviri</option>
+            </select>
+            <label for="prompt"
+              >Cümle ya da paragraf girin:
+              <textarea
+                type="text"
+                id="prompt"
+                name="prompt"
+                placeholder="Cümle yada paragraf yazın"
+                rows="5"
+              ></textarea>
+            </label>
+          </div>
+
+          <button type="submit" class="btn">Düzelt</button>
+        </form>
+      </section>
+      <section>
+        <div class="outputContainer">
+          <span id="output">Sonuç burada gözükecek:</span>
+        </div>
+      </section>
+      <!-- Turkceden Ingilizceye -->
+    </main>
+
+    <div class="spinner"></div>
+  </body>
+</html>
