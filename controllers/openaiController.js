@@ -10,9 +10,8 @@ const correctEnglish = async (req, res) => {
   const userPrompt = req.body.editedPrompt;
 
   try {
-    const reponse = await openai.createCompletion({
+    const response = await openai.createCompletion({
       model: 'text-davinci-003',
-      // prompt: `Correct this to standard English: ${userPrompt}`,
       prompt: userPrompt,
       temperature: 0,
       max_tokens: 256,
@@ -21,7 +20,7 @@ const correctEnglish = async (req, res) => {
       presence_penalty: 0,
     });
 
-    const aiOutput = reponse.data.choices[0].text;
+    const aiOutput = response.data.choices[0].text;
 
     res.status(200).json({
       success: true,

@@ -8,49 +8,47 @@
     <link rel="stylesheet" href="style/spinner.css" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <script src="js/main.js" defer></script>
-    <title>Titcotour yardim</title>
+    <title>CodeAnalyzer</title>
   </head>
   <body>
     <header>
       <a href="https://titcotour.com/" target="_blank">
-        <img src="/images/titco-logo.png" alt="titcotour logo" />
+        <img src="/images/CodeAnalyzer-logo.png" alt="titcotour logo" />
       </a>
     </header>
 
     <main>
       <section class="properEnglish">
         <form id="image-form">
-          <span id="emoji-container"
-            ><span id="emoji-change">🇬🇧</span> > 🇬🇧</span
-          >
-          <h2 id="title">İngilizceyi Düzelt</h2>
+         
+          <h2 id="title">Explain Code 🦜</h2>
 
           <div class="form-control">
             <select name="selection" id="selection">
-              <option selected value="correct">Düzenle</option>
-              <option value="translate">Çeviri</option>
+              <option selected value="correct">Explain</option>
+              <option value="translate">Translate</option>
             </select>
             <label for="prompt"
-              >Cümle ya da paragraf girin:
+              >Enter your code:
               <textarea
                 type="text"
                 id="prompt"
                 name="prompt"
-                placeholder="Cümle yada paragraf yazın"
-                rows="5"
+                placeholder="insert code"
+                rows="10"
               ></textarea>
             </label>
           </div>
 
-          <button type="submit" class="btn">Düzelt</button>
+          <button type="submit" class="btn">Explain</button>
         </form>
       </section>
       <section>
         <div class="outputContainer">
-          <span id="output">Sonuç burada gözükecek:</span>
+          <!-- <span id="output">AI output will be shown here:</span> -->
+        <p id="output">AI output will be shown here:</p>
         </div>
       </section>
-      <!-- Turkceden Ingilizceye -->
     </main>
 
     <div class="spinner"></div>

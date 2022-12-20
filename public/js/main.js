@@ -2,26 +2,22 @@ const spanElement = document.querySelector('#output');
 const selectElement = document.querySelector('#selection');
 const title = document.querySelector('#title');
 const submitButton = document.querySelector('.btn');
-const changeEmoji = document.getElementById('emoji-change');
 
 // English Corrector
 function onSubmit(e) {
   e.preventDefault();
 
-  
   const selectValue = selectElement.value;
-
 
   const prompt = document.querySelector('#prompt').value;
   const editedPrompt =
     selectValue === 'translate'
-      ? 'Translate this into english: ' + prompt
-      : 'Correct this to standard English: ' + prompt;
-
- 
+      ? 'Translate this code to python ' + prompt
+      : 'Explain what this code does step by step and put a line break before each step:  ' +
+        prompt;
 
   if (prompt === '') {
-    alert('Cümle yada paragraf girin');
+    alert('Please provide code');
     return;
   }
 
@@ -54,7 +50,6 @@ async function generateCorrectEnglish(editedPrompt) {
 
     removeSpinner();
   } catch (error) {
-   
     console.log(error);
   }
 }
@@ -76,16 +71,12 @@ function copyToClipboard() {
 function handleSelectChange() {
   const selectValue = selectElement.value;
   selectValue === 'translate'
-    ? (title.textContent = 'İngilizceye Çevir')
-    : (title.textContent = 'İngilizceyi Düzelt');
+    ? (title.textContent = 'Translate Code')
+    : (title.textContent = 'Explain Code 🦜');
 
   selectValue === 'translate'
-    ? (submitButton.textContent = 'Çevir')
-    : (submitButton.textContent = 'Düzelt');
-
-    selectValue === 'translate'
-    ? (changeEmoji.textContent = '🇹🇷')
-    : (changeEmoji.textContent = '🇬🇧');
+    ? (submitButton.textContent = 'Translate')
+    : (submitButton.textContent = 'Explain');
 }
 
 document.querySelector('#image-form').addEventListener('submit', onSubmit);
