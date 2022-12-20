@@ -147,11 +147,28 @@ button:hover {
   font-size: 16px;
 }
 
+footer {
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+footer a:hover {
+  text-decoration: underline dashed salmon;
+}
+
 @media (min-width: 768px) {
   #sectionContainer {
     display: flex;
     justify-content: center;
     margin-inline: 2rem;
+    margin-bottom: 8rem;
   }
 
   section {
