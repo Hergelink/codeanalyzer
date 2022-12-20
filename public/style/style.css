@@ -50,8 +50,6 @@ section {
   padding: 10px;
 }
 
-
-
 h2 {
   margin-bottom: 1rem;
 }
@@ -92,6 +90,11 @@ textarea {
   font-size: 16px;
 }
 
+.buttonDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
 button {
   margin-top: 0.5rem;
   display: flex;
@@ -107,6 +110,17 @@ button {
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.5px;
+}
+
+#eraseBtn {
+  color: rgb(209, 38, 38);
+  background-color: transparent;
+  border: 1px solid rgb(209, 38, 38);
+}
+
+#eraseBtn:hover {
+  color: white;
+  background-color: rgb(209, 38, 38);
 }
 
 button:hover {
@@ -134,17 +148,22 @@ button:hover {
 }
 
 @media (min-width: 768px) {
-
- #sectionContainer {
-  display: flex;
-  justify-content: center;
-  margin-inline: 2rem;
- }
+  #sectionContainer {
+    display: flex;
+    justify-content: center;
+    margin-inline: 2rem;
+  }
 
   section {
     max-width: 800px;
     /* margin-inline: auto; */
   }
+
+  .buttonDiv {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
   #outputSection {
     display: flex;
     flex-direction: column;

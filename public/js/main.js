@@ -1,9 +1,8 @@
 const spanElement = document.querySelector('#output');
 const selectElement = document.querySelector('#selection');
 const title = document.querySelector('#title');
-const submitButton = document.querySelector('.btn');
+const submitButton = document.getElementById('submitBtn');
 
-// English Corrector
 function onSubmit(e) {
   e.preventDefault();
 
@@ -13,8 +12,7 @@ function onSubmit(e) {
   const editedPrompt =
     selectValue === 'translate'
       ? 'Translate this code to python ' + prompt
-      : 'Explain what this code does step by step:  ' +
-        prompt;
+      : 'Explain what this code does step by step:  ' + prompt;
 
   if (prompt === '') {
     alert('Please provide code');
