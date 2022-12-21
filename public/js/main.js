@@ -11,7 +11,7 @@ function onSubmit(e) {
   const prompt = document.querySelector('#prompt').value;
   const editedPrompt =
     selectValue === 'translate'
-      ? 'Translate this code to python ' + prompt
+      ? 'Translate this javascript code to python ' + prompt
       : 'Explain what this code does step by step:  ' + prompt;
 
   if (prompt === '') {
@@ -69,7 +69,7 @@ function copyToClipboard() {
 function handleSelectChange() {
   const selectValue = selectElement.value;
   selectValue === 'translate'
-    ? (title.textContent = 'Translate Code')
+    ? (title.textContent = 'Translate JavaScript => Python')
     : (title.textContent = 'Explain Code 🦜');
 
   selectValue === 'translate'
