@@ -6,7 +6,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-const correctEnglish = async (req, res) => {
+const codeHelper = async (req, res) => {
   const userPrompt = req.body.editedPrompt;
 
   try {
@@ -44,4 +44,4 @@ const correctEnglish = async (req, res) => {
   }
 };
 
-module.exports = { correctEnglish };
+module.exports = { codeHelper };

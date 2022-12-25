@@ -28,7 +28,7 @@ async function generateCorrectEnglish(editedPrompt) {
   try {
     showSpinner();
 
-    const response = await fetch('/openai/generateimage', {
+    const response = await fetch('/openai/codehelp', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
