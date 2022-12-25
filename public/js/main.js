@@ -44,7 +44,18 @@ async function generateCorrectEnglish(editedPrompt) {
     const data = await response.json();
 
     const aiOutput = data.data;
-    document.querySelector('#output').textContent = aiOutput;
+
+    //  below lines are for writing like function from ai
+    let index = 0;
+
+    let interval = setInterval(() => {
+      if (index < aiOutput.length) {
+        spanElement.innerHTML += aiOutput.charAt(index);
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 20);
 
     removeSpinner();
   } catch (error) {
