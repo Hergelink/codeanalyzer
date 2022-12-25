@@ -2,6 +2,7 @@ const spanElement = document.querySelector('#output');
 const selectElement = document.querySelector('#selection');
 const title = document.querySelector('#title');
 const submitButton = document.getElementById('submitBtn');
+const eraseButton = document.getElementById('eraseBtn');
 
 function onSubmit(e) {
   e.preventDefault();
@@ -89,8 +90,15 @@ function handleSelectChange() {
     : (submitButton.textContent = 'Explain');
 }
 
+function eraseContent() {
+
+  spanElement.innerText = '';
+}
+
 document.querySelector('#image-form').addEventListener('submit', onSubmit);
 
 spanElement.addEventListener('click', copyToClipboard);
 
 selectElement.addEventListener('change', handleSelectChange);
+
+eraseButton.addEventListener('click', eraseContent);
