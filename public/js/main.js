@@ -6,6 +6,7 @@ const submitButton = document.getElementById('submitBtn');
 function onSubmit(e) {
   e.preventDefault();
 
+  spanElement.innerText = '';
   const selectValue = selectElement.value;
 
   const prompt = document.querySelector('#prompt').value;
@@ -45,7 +46,7 @@ async function generateCorrectEnglish(editedPrompt) {
 
     const aiOutput = data.data;
 
-    //  below lines are for writing like function from ai
+    //  below lines are for writing like function for the ai output
     let index = 0;
 
     let interval = setInterval(() => {
